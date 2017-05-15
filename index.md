@@ -2,15 +2,15 @@ Welcome to the file browser testing!
 The directory structure of the contents is:
 ----
 /
-	index.html
+	*index.html
 	fileBrowser
-		index.html
+		[index.html
 		scan.php
 		files
-			All your files here 
+			(All your files here) 
 		assets
-			css
-				styles.css
+			{css
+				(styles.css)
 			js
-				script.js
+				(script.js)}]*
 ----
