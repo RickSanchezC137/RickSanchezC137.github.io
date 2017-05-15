@@ -1,11 +1,12 @@
 <?php
 
 $dir = "files";
+// $a = scandir(__DIR__ . '/' . $dir);
+// print_r($a);
 
 // Run the recursive function 
 
-$response = scan($dir);
-
+$response = scan(__DIR__ . '/' . $dir);
 
 // This function scans the files folder recursively, and builds a large array
 
@@ -46,10 +47,12 @@ function scan($dir){
 					"size" => filesize($dir . '/' . $f) // Gets the size of this file
 				);
 			}
+
 		}
 	
 	}
 
+	// print_r($files);
 	return $files;
 }
 
@@ -59,9 +62,13 @@ function scan($dir){
 
 header('Content-type: application/json');
 
-echo json_encode(array(
-	"name" => "files",
-	"type" => "folder",
-	"path" => $dir,
-	"items" => $response
-));
+// debugging
+// print_r($response);
+
+
+// echo json_encode(array(
+// 	"name" => basename($dir),
+// 	"type" => "folder",
+// 	"path" => $dir,
+// 	"items" => $response
+// ));
