@@ -7,7 +7,7 @@ $dir = "files";
 
 // Run the recursive function 
 
-$response = scan(__DIR__ . '/' . $dir);
+$response = scan(__DIR__ . '/' . $dir); // pass the full path to the scan function
 
 // This function scans the files folder recursively, and builds a large array
 
@@ -19,10 +19,13 @@ function scan($dir){
 
 	if(file_exists($dir)){
 	
-		foreach(scandir($dir) as $f) {
+		foreach(scandir($dir) as $f) { // scandir() accepts the full path of the folder to be scanned
 		
 			if(!$f || $f[0] == '.') {
-				continue; // Ignore hidden files
+
+				// It is a hidden file
+				
+				continue; 
 			}
 
 			if(is_dir($dir . '/' . $f)) {
@@ -53,11 +56,8 @@ function scan($dir){
 	
 	}
 
-	// print_r($files);
 	return $files;
 }
-
-
 
 // Output the directory listing as JSON
 
