@@ -1,6 +1,7 @@
 <?php
 
 $dir = "files";
+// debugging
 // $a = scandir(__DIR__ . '/' . $dir);
 // print_r($a);
 
@@ -65,10 +66,9 @@ header('Content-type: application/json');
 // debugging
 // print_r($response);
 
-
-// echo json_encode(array(
-// 	"name" => basename($dir),
-// 	"type" => "folder",
-// 	"path" => $dir,
-// 	"items" => $response
-// ));
+echo json_encode(array(
+	"name" => basename($dir),
+	"type" => "folder",
+	"path" => $dir,
+	"items" => $response
+));
