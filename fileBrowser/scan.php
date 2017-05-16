@@ -7,7 +7,7 @@ $dir = "files";
 
 // Run the recursive function 
 
-$response = scan(__DIR__ . '/' . $dir); // pass the full path to the scan function
+$response = scandir(__DIR__ . '/' . $dir); // pass the full path to the scan function
 
 // This function scans the files folder recursively, and builds a large array
 
