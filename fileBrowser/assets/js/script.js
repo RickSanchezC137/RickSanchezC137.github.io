@@ -15,6 +15,9 @@ $(function(){
 		var folders = [],
 			files = [];
 
+		// debugging
+		window.alert(response);
+
 		// This event listener monitors changes on the URL. We use it to
 		// capture back/forward navigation in the browser.
 
