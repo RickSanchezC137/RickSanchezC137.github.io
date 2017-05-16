@@ -16,7 +16,7 @@ $(function(){
 			files = [];
 
 		// debugging
-		window.alert(data.toString());
+		console.log(data.toString());
 
 		// This event listener monitors changes on the URL. We use it to
 		// capture back/forward navigation in the browser.
@@ -192,7 +192,7 @@ $(function(){
 				else {
 					currentPath = data.path;
 					breadcrumbsUrls.push(data.path);
-					render(searchByPath(currentPath)); // changes made here
+					render(searchByPath(data.path)); // changes rolled back; now in original state
 				}
 			}
 		}
