@@ -217,24 +217,26 @@ $(function(){
 				var path = dir.split('/'), // change rolled back
 					demo = response,
 					flag = 0;
+
+				for(var i=0;i<path.length;i++){
+					for(var j=0;j<demo.length;j++){
+						if(demo[j].name === path[i]){
+							flag = 1;
+							demo = demo[j].items;
+							break;
+						}
+					}
+				}
+
+				demo = flag ? demo : [];
+				return demo;
+
 			}
 			else {
 				window.alert(304+100);
-				break;
+				return;
 			}
 
-			for(var i=0;i<path.length;i++){
-				for(var j=0;j<demo.length;j++){
-					if(demo[j].name === path[i]){
-						flag = 1;
-						demo = demo[j].items;
-						break;
-					}
-				}
-			}
-
-			demo = flag ? demo : [];
-			return demo;
 		}
 
 
