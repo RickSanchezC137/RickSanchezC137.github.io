@@ -189,7 +189,7 @@ $(function(){
 				else {
 					currentPath = data.path;
 					breadcrumbsUrls.push(data.path);
-					render(searchByPath(data.path));
+					render(searchByPath(currentPath)); // changes made here
 				}
 			}
 		}
@@ -208,7 +208,7 @@ $(function(){
 		// Locates a file by path
 
 		function searchByPath(dir) {
-			var path = dir.split('/').slice(0), // important change made here
+			var path = dir.split('/'), // change rolled back
 				demo = response,
 				flag = 0;
 
