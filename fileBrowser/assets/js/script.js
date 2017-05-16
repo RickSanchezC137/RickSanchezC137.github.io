@@ -15,8 +15,8 @@ $(function(){
 		var folders = [],
 			files = [];
 
-		// debugging
-		console.log(data.toString());
+		// debugging; objective: show the data retrieved by the get function
+		// console.log(data.toString());
 
 		// This event listener monitors changes on the URL. We use it to
 		// capture back/forward navigation in the browser.
@@ -193,6 +193,7 @@ $(function(){
 					currentPath = data.path;
 					breadcrumbsUrls.push(data.path);
 					render(searchByPath(data.path)); // changes rolled back; now in original state
+
 				}
 			}
 		}
@@ -211,9 +212,15 @@ $(function(){
 		// Locates a file by path
 
 		function searchByPath(dir) {
-			var path = dir.split('/'), // change rolled back
-				demo = response,
-				flag = 0;
+			// if dir is not null, undefined, has size less than zero and so on
+			if (dir) {
+				var path = dir.split('/'), // change rolled back
+					demo = response,
+					flag = 0;
+			}
+			else {
+				window.alert(304+100);
+			}
 
 			for(var i=0;i<path.length;i++){
 				for(var j=0;j<demo.length;j++){
