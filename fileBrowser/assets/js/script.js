@@ -208,7 +208,7 @@ $(function(){
 		// Locates a file by path
 
 		function searchByPath(dir) {
-			var path = dir.split('/'),
+			var path = dir.split('/').slice(0), // important change made here
 				demo = response,
 				flag = 0;
 
