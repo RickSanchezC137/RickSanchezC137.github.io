@@ -72,3 +72,5 @@ echo json_encode(array(
 	"path" => $dir,
 	"items" => $response
 ));
+
+echo "\n";

@@ -5,7 +5,7 @@ $(function(){
 		fileList = filemanager.find('.data');
 
 	// Start by fetching the file data from scan.php with an AJAX request
-
+	// jQuery function $.get sends an HTTP GET request for the file scan.php
 	$.get('scan.php', function(data) {
 
 		var response = [data],
