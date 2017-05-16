@@ -16,7 +16,7 @@ $(function(){
 			files = [];
 
 		// debugging; objective: show the data retrieved by the get function
-		// console.log(data.toString());
+		console.log(data.toString());
 
 		// This event listener monitors changes on the URL. We use it to
 		// capture back/forward navigation in the browser.
@@ -220,6 +220,7 @@ $(function(){
 			}
 			else {
 				window.alert(304+100);
+				break;
 			}
 
 			for(var i=0;i<path.length;i++){
