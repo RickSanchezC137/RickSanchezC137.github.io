@@ -19,18 +19,34 @@
 		<!-- jquery -->
 		<script src="./assets/js/jquery-1.11.0.min.js"></script>
 		<!-- created javascript file; specify the relative path -->
-		<script src="./assets/js/script.js"></script>
+		<!-- <script src="./assets/js/script.js"></script> -->
 
 
 		<div class="filemanager">
 
-			<!-- The search bar -->
-			<div class="search">
-				<input type="search" placeholder="Find a file.." />
+			<!-- The name search bar -->
+			<div class="namesearch">
+				<input type="search" placeholder="Find a file by name.." />
+			</div>
+
+			<!-- The date search bars -->
+			<div class="datesearch">
+				<input type="search" placeholder="From YYYYMMDD.." />
+				<input type="search" placeholder="To YYYYMMDD.." />
+			</div>
+
+			<!-- Upload button -->
+			<<div>
+				<button type="button"> Upload a file </button>
+			</div>
+
+			<!-- Delete button -->
+			<div>
+				<button type="button"> Delete a file </button>
 			</div>
 			
 			<!-- The path displayer on top -->
-			<div class="breadcrumbs"></div>
+			<div class="pathdisplayer"></div>
 
 			<!-- The content list -->
 			<ul class="data"></ul>
